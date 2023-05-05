@@ -16,11 +16,17 @@
                     @foreach ($trains as $train)
                         <li class="card col-3">
                             <div class="card-body">
-                                <p>id: {{ $train->id_train }}</p>
+                                <h5>Compagnia: {{$train->train_company}}</h5>
+                                <p>Codice treno: {{$train->id_train}}</p>
+                                <p>Stazione di partenza: {{$train->departure_station}}</p>
+                                <p>Stazione di arrivo: {{$train->arrived_station}}</p>
+                                <p>Partenza: {{$train->departure}}</p>
+                                <p>Arrivo: {{$train->arrivals}}</p>
+                                <p>N°carrozze: {{$train->n_carriages}}</p>
                             </div>
                         </li>
                     @endforeach
-                    </ul>
+                </ul>
             </div>
         </div>
     </body>
