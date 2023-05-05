@@ -18,8 +18,8 @@ return new class extends Migration
             $table->string('train_company')->nullable();
             $table->string('departure_station');
             $table->string('arrived_station');
-            $table->timestamp('departure');
-            $table->timestamp('arrivals');
+            $table->timestamp('departure')->nullable();;
+            $table->timestamp('arrivals')->nullable();;
             $table->string('n_carriages');
             $table->boolean('on_time');
             $table->boolean('is_deleted');
