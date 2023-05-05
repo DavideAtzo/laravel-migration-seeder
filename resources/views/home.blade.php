@@ -39,10 +39,16 @@
             <h1>Treni di oggi</h1>
         </div>
         <ul class="list-unstyled d-flex justify-content-between flex-wrap gap-2">
-            @foreach ($train as $now_train)
+            @foreach ($today_train as $train)
                 <li class="card col-3">
                     <div class="card-body">
-                        <h5>Compagnia: {{ $now_train->train_company }}</h5>
+                        <h5>Compagnia: {{ $train->train_company }}</h5>
+                        <p>Codice treno: {{ $train->id_train }}</p>
+                        <p>Stazione di partenza: {{ $train->departure_station }}</p>
+                        <p>Stazione di arrivo: {{ $train->arrived_station }}</p>
+                        <p>Partenza: {{ $train->departure }}</p>
+                        <p>Arrivo: {{ $train->arrivals }}</p>
+                        <p>N°carrozze: {{ $train->n_carriages }}</p>
                     </div>
                 </li>
             @endforeach
