@@ -13,7 +13,6 @@ class PageController extends Controller
 
         $trains = Train::all();
         $today_train = Train::whereDate('departure', Carbon::today())->get();
-        // dd($train);
         return view('home', compact('trains','today_train'));
     }
 }

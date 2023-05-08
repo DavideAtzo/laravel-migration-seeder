@@ -14,12 +14,13 @@ return new class extends Migration
     public function up()
     {
         Schema::create('trains', function (Blueprint $table) {
-            $table->id('id_train')->unique();
+            $table->id();
             $table->string('train_company', 50)->nullable();
             $table->string('departure_station', 50);
             $table->string('arrived_station', 50);
-            $table->timestamp('departure')->nullable();;
-            $table->timestamp('arrivals')->nullable();;
+            $table->timestamp('departure')->nullable();
+            $table->timestamp('arrivals')->nullable();
+            $table->string('train_code');
             $table->tinyInteger('n_carriages');
             $table->boolean('on_time');
             $table->boolean('is_deleted');
